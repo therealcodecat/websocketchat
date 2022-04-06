@@ -66,6 +66,7 @@ ws = {
             ws.reconnect()
             chat.DOM.Disconnected.style.transform = `translateY(100%)`
         }
+        
         ws.socket.onerror = e =>{
             chat.DOM.Disconnected.style.transform = `translateY(100%)`
         }
@@ -162,7 +163,6 @@ chat = {
                 chat.Data.UsernameButtonSet = 1
                 chat.DOM.SetUsernameButton.style.opacity = 1
                 chat.DOM.SetUsernameButton.addEventListener('pointerdown', chat.joinChat)
-                console.log('added event listener')
 
             }
 
@@ -172,7 +172,6 @@ chat = {
             chat.DOM.SetUsernameButton.style.opacity = ''
             chat.DOM.SetUsernameButton.removeEventListener('pointerdown', chat.joinChat)
             chat.Data.UsernameButtonSet = 0
-            console.log('removed event listener')
 
         }
 
