@@ -211,10 +211,13 @@ chat = {
 
     handleMessageInput: e =>{
 
-        if(e.target.value.length > 0) {
+        let trimmed = e.target.value.trim()
+
+        if(trimmed.length > 0) {
 
             if(chat.Data.messageReadyToSend == 0) {
 
+                chat.DOM.MessageInput.value = trimmed
                 chat.Data.messageReadyToSend = 1
                 chat.DOM.SendButton.addEventListener('pointerdown', chat.sendMessage, {once:true})
                 chat.DOM.MessageInput.addEventListener('keydown', chat.handleMessageInputKeydown)
