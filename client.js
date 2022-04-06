@@ -22,6 +22,7 @@ ws = {
                         uuid: chat.Data.uuid
                     })
                 }
+                chat.DOM.Disconnected.style.transform = ``
 
             }
 
@@ -63,8 +64,11 @@ ws = {
 
         ws.socket.onclose = ()=>{
             ws.reconnect()
+            chat.DOM.Disconnected.style.transform = `translateY(100%)`
         }
-        ws.socket.onerror = e =>{return}
+        ws.socket.onerror = e =>{
+            chat.DOM.Disconnected.style.transform = `translateY(100%)`
+        }
 
     },
 
@@ -109,6 +113,7 @@ chat = {
 
     DOM: {
 
+        Disconnected: document.querySelector('.Disconnected'),
         Logo: document.querySelector('.Logo'),
         ChatContainer: document.querySelector('.ChatContainer'),
         UsernameContainer: document.querySelector('.UsernameContainer'),

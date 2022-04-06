@@ -1,20 +1,32 @@
 const fs = require('fs');
 const https = require('https');
-const options = {
-    key: fs.readFileSync('../etc/letsencrypt/live/codecat.pw/privkey.pem', 'utf8'),
-    cert: fs.readFileSync('../etc/letsencrypt/live/codecat.pw/fullchain.pem', 'utf8')
-  };
-const WebSocketServer = require('ws').Server;
+
+//set the ssl certificate and key with node file system module
+const options = 
+
+    {
+        key: fs.readFileSync('../etc/letsencrypt/live/codecat.pw/privkey.pem', 'utf8'),
+        cert: fs.readFileSync('../etc/letsencrypt/live/codecat.pw/fullchain.pem', 'utf8')
+    }
+
+//create a simple https server with node https module
 const server = https.createServer(options);
+
+//websocket server class used to create the websocket server
+const WebSocketServer = require('ws').Server;
+
+//instantiate the websocket server class
 const wss = new WebSocketServer({
     server: server
 });
+
+//create an array to store all incoming websocket connections
 let connections = []
+
+//create an array to store all incoming chat messages
 let messages = []
 
 wss.on('connection', ws =>{
-
-    console.log(ws)
 
     ws.send(JSON.stringify({
         type: 'Identify',

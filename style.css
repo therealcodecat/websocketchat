@@ -23,9 +23,24 @@ html, body {
 
 }
 
+.Disconnected {
+
+    width:100%; height:60px;
+    display:flex; flex-direction:row; align-items:center; justify-content:center;
+    position:absolute; top:-60px; left:0; z-index:2; background:#36afa2; color:white; font-size:18px;
+    transition: all .2s; transform:translateY(0);
+
+}
+
+.Disconnected > div {
+
+    margin-left:10px;
+
+}
+
 .Logo {
 
-    width:100%; height:calc(100% - 180px);
+    width:100%; height:calc(100% - 120px);
     background:blue; font-size:28px; color:white; opacity:1;
     display:flex; flex-direction:row; align-items:center; justify-content:center;
     position:absolute; left:0; top:0; z-index:1; transform:translateY(0); transition: all .2s;
@@ -62,15 +77,6 @@ html, body {
 
 }
 
-.UsernameContainer > div:first-child > div:first-child {
-
-    padding:0 10px; height:50px;
-    font-size:16px; color:rgb(149, 149, 149);
-    display:flex; align-items:center; justify-content:center;
-
-
-}
-
 .ChatContainer {
 
     width:calc(100% - 40px); height:100%; opacity:0; padding:0 20px;
@@ -89,7 +95,7 @@ html, body {
 
 .UsernameInput::placeholder {
 
-    color:white;
+    color:rgb(56, 56, 56);
 
 }
 
