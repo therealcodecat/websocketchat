@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+
+
+html, body {
+
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    background:#131618;
+    position:fixed;
+    margin:0;
+    padding:0;
+    border:0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+
+}
+
+::-webkit-scrollbar {
+    
+    display:none;
+
+}
+
+.Logo {
+
+    width:100%; height:calc(100% - 180px);
+    background:blue; font-size:28px; color:white; opacity:1;
+    display:flex; flex-direction:row; align-items:center; justify-content:center;
+    position:absolute; left:0; top:0; z-index:1; transform:translateY(0); transition: all .2s;
+
+}
+
+.Logo > div {
+
+    margin-left:10px;
+
+}
+
+.MasterContainer {
+
+    width:calc(100% - 40px); padding:0 20px; height:100%;
+    position:relative; overflow:hidden;
+    visibility: hidden;
+
+}
+
+.UsernameContainer {
+
+    width:100%; background:black;
+    position:absolute; left:0; bottom:0; z-index:1;
+    display:flex; flex-direction:column; align-items:center; justify-content:flex-start;
+    color:white; transform:translateY(0); transition: all .2s;
+
+}
+
+.UsernameContainer > div:first-child {
+
+    display:flex; flex-direction:column; align-items:center; justify-content: center;
+    width:100%;
+
+}
+
+.UsernameContainer > div:first-child > div:first-child {
+
+    padding:0 10px; height:50px;
+    font-size:16px; color:rgb(149, 149, 149);
+    display:flex; align-items:center; justify-content:center;
+
+
+}
+
+.ChatContainer {
+
+    width:calc(100% - 40px); height:100%; opacity:0; padding:0 20px;
+    position:absolute; left:0; top:100%; z-index:0;
+    transition: all .2s; transform:translateY(0);
+
+}
+
+.UsernameInput {
+
+    width:100%; height:70px; background:transparent;
+    outline:0; padding:0; border-radius:0; border:0;
+    font-size:22px; text-align:center; color:white; caret-color:white;
+
+}
+
+.UsernameInput::placeholder {
+
+    color:white;
+
+}
+
+.SetUsernameButton {
+
+    width:100%; height:60px;
+    display:flex; align-items:center; justify-content:center; font-size:18px;
+    color:white; background:blue; opacity:.2; cursor:pointer; 
+    transition: all .2s;
+
+}
+
+.OnlineUsersContainer {
+
+    display:flex; flex-direction:column; 
+
+}
+
+.OnlineUsersContainer > div:first-child {
+
+    width:calc(100% - 10px); height:50px; padding-left:10px; color:white;
+    display:flex; flex-direction:row; align-items:center; justify-content:flex-end;
+
+}
+
+.OnlineUsersIcon {
+
+    height:100%; display:flex; align-items:center; justify-content:center;
+    font-size:22px; color:rgb(20, 251, 20);
+
+}
+
+.OnlineUsersCount {
+
+    height:100%; display:flex; align-items:center; justify-content:center;
+    font-size:18px; margin:0 10px; padding-bottom:2px;
+
+}
+
+.OnlineUsers {
+
+    overflow-y:hidden; overflow-x:scroll; display:-webkit-box;
+    width:calc(100% - 20px); padding:10px;
+
+}
+
+.OnlineUsers > div {
+
+    min-width:75px; height:75px; margin-right:10px; color:white;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+
+}
+
+.OnlineUsers > div:last-child {
+
+    margin-right:0;
+
+}
+
+.OnlineUsers > div > div:first-child {
+
+    font-size:22px; 
+
+}
+
+.OnlineUsers > div > div:last-child {
+
+    font-size:20px;
+
+}
+
+.ChatMessages {
+
+    width:100%; height:calc(100% - 240px); background:#000000;
+    overflow-y:scroll; overflow-x:hidden; padding-top:10px; border-top-right-radius:10px; border-top-left-radius:10px;
+
+}
+
+.ChatMessages > div {
+
+    width:calc(100% - 20px); padding:10px; border-bottom: 1px solid rgb(14, 14, 14);
+    display:flex; flex-direction:row; align-items:flex-start; justify-content:flex-start;
+
+}
+
+.ChatMessages > div:last-child {
+
+    border-bottom:1px solid transparent;
+
+}
+
+.ChatMessages > div > div:first-child {
+
+    width:calc(100% - 75px); 
+
+}
+
+.ChatMessages > div > div:first-child > div:first-child {
+
+    font-size:20px; color:rgb(164, 164, 164);
+
+}
+
+.ChatMessages > div > div:first-child > div:last-child {
+
+    font-size:16px; color:white; margin-top:10px;
+    overflow-wrap: break-word; line-height: 22px;
+
+}
+
+.ChatMessages > div > div:last-child {
+
+    width:75px; color:rgb(88, 88, 88); display:flex; align-items:center; justify-content:flex-end; font-size:14px;
+
+}
+
+.MessengerContainer {
+
+    width:100%; height:95px;
+    display:flex; flex-direction:row; align-items:flex-start; justify-content:space-between;
+
+}
+
+.MessageInput {
+
+    width:calc(100% - 85px); height:65px;
+    padding:0 0 0 10px; outline:0; border:0; margin:0; border-radius:0;
+    font-size:18px; color:white; background:#0d0f11; caret-color:white;
+
+}
+
+.MessageInput::placeholder {
+
+    color:#1f2225;
+
+}
+
+.SendButton {
+
+    width:75px; height:65px;
+    display:flex; align-items:center; justify-content:center; position:relative; z-index:1;
+    font-size:16px; color:white; background:#767b7d; cursor:pointer; opacity:.2;
+    transition: all .2s;
+
+}
+
+.SendButtonCover {
+
+    width:100%; height:100%; position:absolute;
+
+}

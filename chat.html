@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content= "width=device-width, user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href='style.css' rel='stylesheet'>
+  </head>
+  <body>
+
+    <div class='MasterContainer'>
+
+        <div class='Logo'>
+            <span class="iconify" data-icon="la:cat"></span>
+            <div>Chat</div>
+        </div>
+
+        <div class='UsernameContainer'>
+
+            <div>
+
+                <div>Set your username:</div>
+
+                <input type='text' class='UsernameInput' placeholder='type username here..'>
+
+            </div>
+
+            <div class='SetUsernameButton'>Join Chat</div>
+
+        </div>
+
+        <div class='ChatContainer'>
+
+            <div class='OnlineUsersContainer'>
+
+                <div>
+    
+                    <div class='OnlineUsersIcon'>
+                        <span class="iconify" data-icon="heroicons-outline:status-online"></span>
+                    </div>
+    
+                    <div class='OnlineUsersCount'></div>
+    
+                </div>
+    
+                <div class='OnlineUsers'></div>
+    
+            </div>
+    
+            <div class='ChatMessages'></div>
+    
+            <div class='MessengerContainer'>
+    
+                <input type='text' class='MessageInput' placeholder="Type a message">
+    
+                <div class='SendButton'>
+                    <div class='SendButtonCover'></div>
+                    <span class="iconify" data-icon="akar-icons:send"></span>
+                </div>
+    
+            </div>
+
+        </div>
+
+    </div>
+
+
+  </body>
+  <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+  <script src='client.js'></script>
+</html>
